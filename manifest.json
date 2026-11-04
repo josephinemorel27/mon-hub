@@ -1,0 +1,23 @@
+{
+  "name": "Mon Hub Personnel",
+  "short_name": "Mon Hub",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0b0f19",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://api.iconify.design/solar:widget-5-bold-duotone.png?color=%234f46e5&width=192",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://api.iconify.design/solar:widget-5-bold-duotone.png?color=%234f46e5&width=512",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
