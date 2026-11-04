@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>Mon Hub</title>
+
+  <!-- PWA & Mobile Web App -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#4f46e5">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Mon Hub">
+  <link rel="apple-touch-icon" href="https://api.iconify.design/solar:widget-5-bold-duotone.png?color=%234f46e5&width=192">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background-color: #0b0f19;
+    }
+    iframe {
+      width: 100vw;
+      height: 100vh;
+      border: none;
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- REMPLACEZ L'ATTRIBUT SRC CI-DESSOUS PAR VOTRE LIEN APPS SCRIPT /exec -->
+  <iframe 
+    src="https://script.google.com/macros/s/AKfycbyaI5QTY-LyKAyjwHG87t_wtLWJMwZh_0uRn4o-eZqDCFR0p0CwQCOiGIyN8uXjy51vXQ/exec" 
+    allow="geolocation; microphone; camera; clipboard-write;"
+    frameborder="0">
+  </iframe>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('SW prêt :', reg.scope))
+          .catch(err => console.log('Erreur SW :', err));
+      });
+    }
+  </script>
+</body>
+</html>
